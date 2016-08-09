@@ -1,4 +1,4 @@
-# fpga_miner 1.0.0
+# fpga_miner 1.1
 
 This miner can be used with ztex-1.15y FPGAs, or other simple serial FPGAs (such as the BeMicroCVA9) that communicate through a serial port to mine coins using the standard 80 byte block header.  Note: This is just the miner, you will have to provide your own bitstreams for the algo you are mining.
 
