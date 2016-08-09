@@ -35,7 +35,7 @@ void blake256_8_hash(unsigned char *hash, unsigned char *data)
 	memcpy(hash, h, 32);
 }
 
-int scanhash_blakecoin(int thr_id, uint32_t *pdata, const uint32_t *ptarget, uint32_t max_nonce, uint64_t *hashes_done)
+int scanhash_blake256_8(int thr_id, uint32_t *pdata, const uint32_t *ptarget, uint32_t max_nonce, uint64_t *hashes_done)
 {
 	int i;
 	const uint32_t first_nonce = pdata[19];
