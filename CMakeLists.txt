@@ -51,10 +51,12 @@ set(SRC_LIST fpga-miner.c
 		libztex.c
 		util.c
 		./algo/blake256-8.c
+		./algo/blake2s.c
 		./algo/groestl.c
 		./algo/myr-groestl.c
 		./algo/sha2.c
 		./algo/sph_blake.c
+		./algo/sph_blake2s.c
 		./algo/sph_groestl.c
 	)
 			

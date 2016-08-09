@@ -2,7 +2,7 @@
 #define __MINER_H__
 
 #define PACKAGE_NAME "fpga_miner"
-#define PACKAGE_VERSION "1.0.0"
+#define PACKAGE_VERSION "1.1"
 
 #define USER_AGENT PACKAGE_NAME "/" PACKAGE_VERSION
 #define MAX_CPUS 16
@@ -469,6 +469,14 @@ int scanhash_groestl(int thr_id, uint32_t *pdata, const uint32_t *ptarget, uint3
 
 void myriadhash(void *output, const void *input);
 int scanhash_myriad(int thr_id, uint32_t *pdata, const uint32_t *ptarget, uint32_t max_nonce, uint64_t *hashes_done);
+
+void blake256_8_midstate(unsigned char *midstate, unsigned char *data);
+void blake256_8_hash(unsigned char *hash, unsigned char *data);
+int scanhash_blake256_8(int thr_id, uint32_t *pdata, const uint32_t *ptarget, uint32_t max_nonce, uint64_t *hashes_done);
+
+void blake2s_midstate(void *output, const void *input);
+void blake2s_hash(void *output, const void *input);
+int scanhash_blake2s(int thr_id, uint32_t *pdata, const uint32_t *ptarget, uint32_t max_nonce, uint64_t *hashes_done);
 
 void sha256(const unsigned char *message, unsigned int len, unsigned char *digest);
 void sha256d(unsigned char *hash, const unsigned char *data, int len);
